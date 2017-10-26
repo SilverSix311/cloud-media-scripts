@@ -5,16 +5,14 @@ This also means if you loose your encryption keys you can't read your media.
 
 The config right now is configured to have atleast 1 TB for caching and a decent internet connection. If you have a smaller drive or just want to optimize it [click here](#optimize-configuration-wip).
 
-### I've created another repository with this included in a docker image. Check it out [here](https://github.com/madslundt/docker-cloud-media-scripts)
-
 # Easy install
 unzip, curl and bash is needed to run easy install.
 
-```bash <( curl -Ls https://github.com/madslundt/cloud-media-scripts/raw/master/INSTALL )```
+```bash <( curl -Ls https://github.com/SilverSix311/cloud-media-scripts/raw/master/INSTALL )```
 
 By default this will place cloud-media-scripts in the directory `./cloud-media-scripts`. An extra argument can be added to change this
 
-```bash <( curl -Ls https://github.com/madslundt/cloud-media-scripts/raw/master/INSTALL ) [PATH]```
+```bash <( curl -Ls https://github.com/SilverSix311/cloud-media-scripts/raw/master/INSTALL ) [PATH]```
 
 This has only been tested on Ubuntu 16.04+. Please create an issue if you have any problems.
 
@@ -185,12 +183,3 @@ Depending on your internet connection, you can optimize when plexdrive download 
 
 Plexdrive
  - `chunk-size` the size of the chunks downloaded by Plexdrive. For faster connections increase this.
-
-# Donate
-If you want to support the project or just buy me a beer I accept Paypal and bitcoins.
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/madslundt)
-
-BitCoin address: 18fXu7Ty9RB4prZCpD8CDD1AyhHaRS1ef3
-
-![bitcoin](https://i.imgur.com/vlzF8Ep.png)
