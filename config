@@ -4,6 +4,7 @@
 # DIRECTORIES
 ###############################################################################
 media_dir="INSERT_ROOT_DIR"
+install_dir="INSERT_ROOT_DIR"
 
 # Cloud directories
 cloud_encrypt_dir="${media_dir}/.cloud-encrypt"
@@ -24,7 +25,7 @@ encrypt_media=1
 ###############################################################################
 # UNION-FS
 ###############################################################################
-ufs_bin="/usr/bin/unionfs"
+ufs_bin="/usr/bin/unionfs-fuse"
 
 ufs_options="-o cow,allow_other,direct_io,nonempty,auto_cache,sync_read"
 
@@ -32,7 +33,7 @@ ufs_options="-o cow,allow_other,direct_io,nonempty,auto_cache,sync_read"
 ###############################################################################
 # PLEXDRIVE
 ###############################################################################
-plexdrive_dir="${media_dir}/plexdrive"
+plexdrive_dir="${install_dir}/plexdrive"
 plexdrive_bin="${plexdrive_dir}/plexdrive-linux-amd64"
 
 mongo_database="plexdrive"
@@ -46,7 +47,7 @@ plexdrive_options="--temp=${plexdrive_temp_dir} -o allow_other,read_only --clear
 ###############################################################################
 # RCLONE
 ###############################################################################
-rclone_dir="${media_dir}/rclone"
+rclone_dir="${install_dir}/rclone"
 rclone_bin="${rclone_dir}/rclone"
 
 rclone_config="${rclone_dir}/rclone.conf"
