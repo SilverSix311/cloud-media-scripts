@@ -15,7 +15,7 @@ if [ -e "${mypwd}/config" ]; then
     exit 02
 fi
 
-wget "https://github.com/madslundt/cloud-media-scripts/archive/master.zip"
+wget "https://github.com/SilverSix311/cloud-media-scripts/archive/master.zip"
 unzip master.zip
 rm -rf master.zip
 mkdir -p "${mypwd}"
