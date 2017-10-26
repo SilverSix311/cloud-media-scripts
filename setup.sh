@@ -27,12 +27,12 @@ if [ ! -f "${rclone_bin}" ]; then
         mkdir -p "${rclone_dir}"
     fi
     wget "${_rclone_url}"
-    mkdir "${media_dir}/${_rclone_release}"
-    unzip "${_rclone_zip}" -d "${media_dir}"
-    cp -rf "${media_dir}/${_rclone_release}/"* "${rclone_dir}/"
+    mkdir "${install_dir}/${_rclone_release}"
+    unzip "${_rclone_zip}" -d "${install_dir}"
+    cp -rf "${install_dir}/${_rclone_release}/"* "${rclone_dir}/"
     chmod a+x "${rclone_bin}"
     rm -rf "${_rclone_zip}"
-    rm -rf "${media_dir}/${_rclone_release}"
+    rm -rf "${install_dir}/${_rclone_release}"
 fi
 
 if [ ! -f "${plexdrive_bin}" ]; then
@@ -50,7 +50,7 @@ else
 fi
 
 sudo sed -i "s|#user_allow_other|user_allow_other|g" "/etc/fuse.conf"
-chmod a+x "${media_dir}/scripts/"*
+chmod a+x "${install_dir}/scripts/"*
 
 if [ ! -d "${local_decrypt_dir}" ]; then
     mkdir -p "${local_decrypt_dir}"
@@ -122,8 +122,8 @@ done
 
 if [ "${mountStart,,}" == "y"  ]; then
     printf "\nThis may take a while because Plexdrive needs to cache your files\n"
-    bash ${media_dir}/scripts/mount.remote
+    bash ${install_dir}/scripts/mount.remote
 else
-    printf "\nStart mount later by running the mount.remote [${media_dir}/scripts/mount.remote]\n"
+    printf "\nStart mount later by running the mount.remote [${install_dir}/scripts/mount.remote]\n"
     echo "Or running setup again"
 fi
